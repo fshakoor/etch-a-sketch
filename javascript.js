@@ -1,6 +1,7 @@
 function page() {
     let curSize = 16;
     let canvasSize = (curSize*15).toString() + 'px';
+    const selectBody = document.querySelector('body');
 
     const container = document.querySelector('.container')
     container.style.maxWidth = canvasSize;
@@ -16,7 +17,7 @@ function page() {
 
     btn.addEventListener('click', () => {
         const blocks = document.querySelectorAll('.content')
-        let curSize = prompt('Select the dimensions of the grid! (Capped at 100x100)');
+        let curSize = prompt('Type an integer to select the dimensions of your canvas! (For example type "10" for a 10x10 canvas)');
         if (curSize == '') {curSize = 16};
         if (curSize > 90) {curSize = 90};
         let canvasSize = (curSize*15).toString() + 'px';
@@ -32,7 +33,12 @@ function page() {
                 newDiv.style.backgroundColor = 'black';
             });
         }
+        displayDimensions.textContent = 'Current Canvas Dimensions: ' + curSize + ' x ' + curSize 
     })
+    const displayDimensions = document.createElement('h3')
+    displayDimensions.classList.add('displayDim')
+    displayDimensions.textContent = 'Current Canvas Dimensions: ' + curSize + ' x ' + curSize 
+    selectBody.appendChild(displayDimensions)
 }
 
 page()

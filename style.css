@@ -50,3 +50,10 @@ h1 {
     padding: 0;
     gap: 16px;
 }
+
+.displayDim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EFEFEF;
+}
