@@ -11,7 +11,7 @@ h1 {
 
 .container {
     display: flex;
-    max-width: 400px;
+    /* max-width: 320px; */
     flex-wrap: wrap;
     flex: 0;
     padding: 20px;
@@ -20,9 +20,9 @@ h1 {
 }
 
 .content {
-    height: 25px;
+    height: 15px;
     display: flex;
-    width: 25px;
+    width: 15px;
     background-color: #EFEFEF;
 }
 
